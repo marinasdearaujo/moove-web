@@ -23,7 +23,11 @@
   .card:hover{transform:translateY(-4px);border-color:var(--teal)}
   .thumb{height:340px;overflow:hidden;position:relative;border-bottom:1px solid var(--line);background:#0a0f1a}
   .thumb iframe{width:1440px;height:1214px;border:0;transform:scale(.397);transform-origin:top left;pointer-events:none}
+  .thumb.pic{background-size:cover;background-position:top center}
   .badge{position:absolute;top:16px;left:16px;background:rgba(11,18,32,.82);backdrop-filter:blur(6px);border:1px solid var(--line);color:var(--gold);font-size:11.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 13px;border-radius:20px;z-index:2}
+  .badge.live{color:#5fe0b0;border-color:rgba(95,224,176,.4)}
+  .seclabel{grid-column:1/-1;color:var(--mut);font-size:13px;letter-spacing:2.5px;text-transform:uppercase;padding:6px 4px;border-bottom:1px solid var(--line)}
+  .seclabel:not(:first-child){margin-top:26px}
   .cbody{padding:24px 26px}
   .cbody .r{display:flex;justify-content:space-between;align-items:baseline}
   .cbody h3{font-size:23px;letter-spacing:-.3px}
@@ -47,6 +51,16 @@
 
 <div class="wrap">
   <div class="grid">
+    <div class="seclabel">Live sites we've shipped</div>
+    <a class="card" href="https://www.cheffoods.com.br/marca-propria/" target="_blank">
+      <div class="thumb pic" style="background-image:url(img/real-chef.jpg)"><span class="badge live">Live · Client</span></div>
+      <div class="cbody"><div class="r"><h3>Chef Foods</h3><span class="arrow">Visit site →</span></div><p>Full-screen, image-led landing page for a food co-manufacturer.</p></div>
+    </a>
+    <a class="card" href="https://nossocontoanimado.netlify.app/" target="_blank">
+      <div class="thumb pic" style="background-image:url(img/real-conto.jpg)"><span class="badge live">Live · Product</span></div>
+      <div class="cbody"><div class="r"><h3>Nosso Conto</h3><span class="arrow">Visit site →</span></div><p>Storytelling sales page for a personalized animated-video product.</p></div>
+    </a>
+    <div class="seclabel">Design concepts</div>
     <a class="card" href="sites/noir-fine-art.html" target="_blank">
       <div class="thumb"><span class="badge">Luxury E-commerce</span><iframe src="sites/noir-fine-art.html" scrolling="no" loading="lazy"></iframe></div>
       <div class="cbody"><div class="r"><h3>Éclat</h3><span class="arrow">View live →</span></div><p>Fine art &amp; framed prints store with made-to-order framing.</p></div>

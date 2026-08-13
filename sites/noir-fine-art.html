@@ -23,11 +23,8 @@
   .hero p{color:var(--mut);font-size:18px;max-width:400px;margin-bottom:34px}
   .btn{background:var(--gold);color:#15120e;padding:15px 30px;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;text-decoration:none;display:inline-block}
   .btn.o{background:transparent;border:1px solid var(--line);color:var(--cream);margin-left:12px}
-  /* framed artwork component */
-  .frame{background:#2a2318;padding:26px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);position:relative}
-  .frame .mat{background:var(--cream);padding:30px}
-  .frame .art{height:360px;background:linear-gradient(160deg,#c98f5a,#7a4b6b 55%,#2f3b5e)}
-  .frame.tall .art{height:420px}
+  /* hero image */
+  .heroimg img{width:100%;display:block;border-radius:2px;box-shadow:0 45px 90px -35px rgba(0,0,0,.75)}
   .strip{display:flex;justify-content:center;gap:60px;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--mut);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;flex-wrap:wrap}
   section{padding:90px 0}
   .ey{color:var(--gold);font-size:12px;letter-spacing:3px;text-transform:uppercase;text-align:center;margin-bottom:14px}
@@ -36,24 +33,16 @@
   .sub{text-align:center;color:var(--mut);max-width:520px;margin:0 auto 56px;font-size:16px}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
   .card{cursor:pointer}
-  .card .fr{background:#2a2318;padding:16px;margin-bottom:18px}
-  .card .fr .mat{background:var(--cream);padding:18px}
-  .card .fr .art{height:260px}
-  .card:nth-child(1) .art{background:linear-gradient(160deg,#d9a05a,#6b4a2f)}
-  .card:nth-child(2) .art{background:linear-gradient(160deg,#8794b8,#2c3350)}
-  .card:nth-child(3) .art{background:linear-gradient(160deg,#c98a9a,#4a2f3b)}
-  .card:nth-child(4) .art{background:linear-gradient(160deg,#9fb59a,#38493a)}
-  .card:nth-child(5) .art{background:linear-gradient(160deg,#caa06a,#3f3320)}
-  .card:nth-child(6) .art{background:linear-gradient(160deg,#a892b8,#332c48)}
+  .card .ph{margin-bottom:18px;border-radius:2px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(0,0,0,.7)}
+  .card .ph img{width:100%;display:block;transition:transform .4s}
+  .card:hover .ph img{transform:scale(1.03)}
   .card .r{display:flex;justify-content:space-between;align-items:baseline}
   .card .n{font-size:21px}
   .card .pr{color:var(--gold);font-size:18px}
   .card .meta{color:var(--mut);font-size:13.5px;margin-top:2px}
   .card .add{margin-top:14px;display:block;text-align:center;border:1px solid var(--line);padding:11px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--cream);text-decoration:none}
   .framing{background:var(--bg2);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:56px}
-  .framing .im{height:320px;background:#2a2318;padding:22px}
-  .framing .im .mat{background:var(--cream);height:100%;padding:26px}
-  .framing .im .art{height:100%;background:linear-gradient(160deg,#caa06a,#4a3520)}
+  .framing .im img{width:100%;height:340px;object-fit:cover;display:block;border-radius:2px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
   .framing h2{text-align:left;font-size:38px;margin-bottom:18px}
   .framing p{color:var(--mut);margin-bottom:14px}
   .framing .opts{display:flex;gap:14px;margin:22px 0 26px}
@@ -90,7 +79,7 @@
       <p>Museum-quality photography and artwork, hand-framed to order and delivered ready to hang.</p>
       <a href="#" class="btn">Shop the collection</a><a href="#" class="btn o">Our frames</a>
     </div>
-    <div class="frame tall"><div class="mat"><div class="art"></div></div></div>
+    <div class="heroimg"><img src="img/hero-dunes.jpg" alt="Framed fine art print of golden dunes"></div>
   </div>
 </div>
 
@@ -103,18 +92,18 @@
   <h2 class="serif">Pieces for every <em>wall</em></h2>
   <p class="sub">Curated photography and original artwork, printed on archival paper and framed in solid wood.</p>
   <div class="grid">
-    <div class="card"><div class="fr"><div class="mat"><div class="art"></div></div></div><div class="r"><span class="n serif">Golden Dunes</span><span class="pr">$280</span></div><div class="meta">Photography · Framed · 60×80cm</div><a href="#" class="add">Add to bag</a></div>
-    <div class="card"><div class="fr"><div class="mat"><div class="art"></div></div></div><div class="r"><span class="n serif">Still Waters</span><span class="pr">$240</span></div><div class="meta">Photography · Framed · 50×70cm</div><a href="#" class="add">Add to bag</a></div>
-    <div class="card"><div class="fr"><div class="mat"><div class="art"></div></div></div><div class="r"><span class="n serif">Rosa Abstract</span><span class="pr">$320</span></div><div class="meta">Original artwork · Framed · 70×90cm</div><a href="#" class="add">Add to bag</a></div>
-    <div class="card"><div class="fr"><div class="mat"><div class="art"></div></div></div><div class="r"><span class="n serif">Green Hour</span><span class="pr">$210</span></div><div class="meta">Photography · Framed · 40×50cm</div><a href="#" class="add">Add to bag</a></div>
-    <div class="card"><div class="fr"><div class="mat"><div class="art"></div></div></div><div class="r"><span class="n serif">Amber Field</span><span class="pr">$290</span></div><div class="meta">Photography · Framed · 60×80cm</div><a href="#" class="add">Add to bag</a></div>
-    <div class="card"><div class="fr"><div class="mat"><div class="art"></div></div></div><div class="r"><span class="n serif">Violet Study</span><span class="pr">$340</span></div><div class="meta">Original artwork · Framed · 70×90cm</div><a href="#" class="add">Add to bag</a></div>
+    <div class="card"><div class="ph"><img src="img/dunes.jpg" alt="Golden Dunes framed print"></div><div class="r"><span class="n serif">Golden Dunes</span><span class="pr">$280</span></div><div class="meta">Photography · Framed · 60×80cm</div><a href="#" class="add">Add to bag</a></div>
+    <div class="card"><div class="ph"><img src="img/lake.jpg" alt="Still Waters framed print"></div><div class="r"><span class="n serif">Still Waters</span><span class="pr">$240</span></div><div class="meta">Photography · Framed · 50×70cm</div><a href="#" class="add">Add to bag</a></div>
+    <div class="card"><div class="ph"><img src="img/rose.jpg" alt="Rosa Abstract framed print"></div><div class="r"><span class="n serif">Rosa Abstract</span><span class="pr">$320</span></div><div class="meta">Original artwork · Framed · 70×90cm</div><a href="#" class="add">Add to bag</a></div>
+    <div class="card"><div class="ph"><img src="img/forest.jpg" alt="Green Hour framed print"></div><div class="r"><span class="n serif">Green Hour</span><span class="pr">$210</span></div><div class="meta">Photography · Framed · 40×50cm</div><a href="#" class="add">Add to bag</a></div>
+    <div class="card"><div class="ph"><img src="img/meadow.jpg" alt="Amber Field framed print"></div><div class="r"><span class="n serif">Amber Field</span><span class="pr">$290</span></div><div class="meta">Photography · Framed · 60×80cm</div><a href="#" class="add">Add to bag</a></div>
+    <div class="card"><div class="ph"><img src="img/violet.jpg" alt="Violet Study framed print"></div><div class="r"><span class="n serif">Violet Study</span><span class="pr">$340</span></div><div class="meta">Original artwork · Framed · 70×90cm</div><a href="#" class="add">Add to bag</a></div>
   </div>
 </section>
 
 <div class="wrap">
   <div class="framing">
-    <div class="im"><div class="mat"><div class="art"></div></div></div>
+    <div class="im"><img src="img/hero-dunes.jpg" alt="Framed print detail"></div>
     <div>
       <div class="ey" style="text-align:left">Made to order</div>
       <h2 class="serif">Choose your frame</h2>
