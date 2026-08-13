@@ -21,8 +21,9 @@
   .hero .meta{display:flex;justify-content:space-between;align-items:flex-end;margin-top:44px;padding-bottom:34px;border-bottom:1px solid var(--line)}
   .hero .meta p{max-width:420px;font-size:18px;opacity:.85}
   .hero .meta a{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px;white-space:nowrap}
-  .big{height:520px;margin:20px 0 0;border-radius:3px;background:linear-gradient(135deg,#cfc4b0,#a89a83 60%,#6f6555);position:relative;overflow:hidden}
-  .big:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 30%,rgba(255,255,255,.3),transparent 45%)}
+  .big{height:520px;margin:20px 0 0;border-radius:3px;position:relative;overflow:hidden}
+  .big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .big:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(28,26,23,.55),transparent 45%)}
   .big .cap{position:absolute;bottom:26px;left:30px;color:#f6f4ef;z-index:2}
   .big .cap .t{font-size:26px}
   .big .cap .s{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.85}
@@ -33,11 +34,8 @@
   .work{display:grid;grid-template-columns:1fr 1fr;gap:30px}
   .proj{cursor:pointer}
   .proj .im{height:400px;border-radius:3px;position:relative;overflow:hidden;margin-bottom:18px}
-  .proj:nth-child(1) .im{background:linear-gradient(140deg,#d8cdb6,#8c8069)}
-  .proj:nth-child(2) .im{background:linear-gradient(140deg,#c3b7a3,#5f5647)}
-  .proj:nth-child(3) .im{background:linear-gradient(140deg,#e2d9c8,#b0a48c)}
-  .proj:nth-child(4) .im{background:linear-gradient(140deg,#a89a83,#4d453a)}
-  .proj .im:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 25%,rgba(255,255,255,.28),transparent 50%)}
+  .proj .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .proj:hover .im img{transform:scale(1.045)}
   .proj .r{display:flex;justify-content:space-between;align-items:baseline}
   .proj .n{font-size:26px}
   .proj .y{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.55}
@@ -64,7 +62,7 @@
       <p class="san">An interior design studio shaping calm, considered homes and spaces across coastal and city life.</p>
       <a href="#" class="san">View selected work</a>
     </div>
-    <div class="big"><div class="cap san"><div class="t" style="font-family:Didot,serif">Coastal House</div><div class="s">Amalfi · 2025</div></div></div>
+    <div class="big"><img src="img/atelier-living.jpg" alt="Coastal House living room"><div class="cap san"><div class="t" style="font-family:Didot,serif">Coastal House</div><div class="s">Amalfi · 2025</div></div></div>
   </div>
 </div>
 
@@ -72,10 +70,10 @@
   <div class="ey san">Selected work</div>
   <h2>Recent <em>projects</em></h2>
   <div class="work">
-    <div class="proj"><div class="im"></div><div class="r"><span class="n">The Slow House</span><span class="y san">2025</span></div><div class="loc san">Private residence · Lisbon</div></div>
-    <div class="proj"><div class="im"></div><div class="r"><span class="n">Marble & Oak</span><span class="y san">2024</span></div><div class="loc san">Boutique hotel · Milan</div></div>
-    <div class="proj"><div class="im"></div><div class="r"><span class="n">Garden Apartment</span><span class="y san">2024</span></div><div class="loc san">Residence · Copenhagen</div></div>
-    <div class="proj"><div class="im"></div><div class="r"><span class="n">Studio Aera</span><span class="y san">2023</span></div><div class="loc san">Workspace · New York</div></div>
+    <div class="proj"><div class="im"><img src="img/atelier-1.jpg" alt="The Slow House"></div><div class="r"><span class="n">The Slow House</span><span class="y san">2025</span></div><div class="loc san">Private residence · Lisbon</div></div>
+    <div class="proj"><div class="im"><img src="img/atelier-2.jpg" alt="Marble and Oak"></div><div class="r"><span class="n">Marble & Oak</span><span class="y san">2024</span></div><div class="loc san">Boutique hotel · Milan</div></div>
+    <div class="proj"><div class="im"><img src="img/atelier-3.jpg" alt="Garden Apartment"></div><div class="r"><span class="n">Garden Apartment</span><span class="y san">2024</span></div><div class="loc san">Residence · Copenhagen</div></div>
+    <div class="proj"><div class="im"><img src="img/atelier-4.jpg" alt="Studio Aera"></div><div class="r"><span class="n">Studio Aera</span><span class="y san">2023</span></div><div class="loc san">Workspace · New York</div></div>
   </div>
 </section>
 
@@ -92,5 +90,28 @@
     <div class="san">studio@atelier-ix.com<br>+39 02 8841 220<br>Via della Spiga · Milan</div>
   </div>
 </div>
+<!--mv-anim-->
+<style>
+@media (prefers-reduced-motion:no-preference){
+ html.mv-on [data-rise]{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+ html.mv-on [data-rise].in{opacity:1;transform:none}
+}
+a.btn,.btn,.book,.add,.cart,.news .field a{transition:transform .2s ease,box-shadow .2s ease,filter .2s}
+a.btn:hover,.btn:hover,.book:hover,.add:hover,.cart:hover{transform:translateY(-2px)}
+</style>
+<script>
+(function(){
+ var R=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(R||!('IntersectionObserver'in window))return;
+ document.documentElement.classList.add('mv-on');
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
+ function run(){
+  var sels='section,.hero,.card,.prog,.dish,.proj,.p,.kpi,.serv>div,.feat>div,.grid>*,.band>div,.stats>div,.menu>div,.work>div,.prods>div,.s';
+  var els=document.querySelectorAll(sels),seen=[];
+  for(var i=0;i<els.length;i++){var el=els[i];if(seen.indexOf(el)<0){seen.push(el);el.setAttribute('data-rise','');io.observe(el);}}
+ }
+ if(document.readyState!=='loading')run();else document.addEventListener('DOMContentLoaded',run);
+})();
+</script>
 </body>
 </html>

@@ -51,42 +51,40 @@
 
 <div class="wrap">
   <div class="grid">
-    <div class="seclabel">Live sites we've shipped</div>
+    <a class="card" href="sites/noir-fine-art.html" target="_blank">
+      <div class="thumb pic" style="background-image:url(img/thumb-eclat.jpg)"><span class="badge">Luxury E-commerce</span></div>
+      <div class="cbody"><div class="r"><h3>Éclat</h3><span class="arrow">View live →</span></div><p>Fine art &amp; framed prints store with made-to-order framing.</p></div>
+    </a>
     <a class="card" href="https://www.cheffoods.com.br/marca-propria/" target="_blank">
       <div class="thumb pic" style="background-image:url(img/real-chef.jpg)"><span class="badge live">Live · Client</span></div>
       <div class="cbody"><div class="r"><h3>Chef Foods</h3><span class="arrow">Visit site →</span></div><p>Full-screen, image-led landing page for a food co-manufacturer.</p></div>
     </a>
-    <div class="seclabel">Design concepts</div>
-    <a class="card" href="sites/noir-fine-art.html" target="_blank">
-      <div class="thumb"><span class="badge">Luxury E-commerce</span><iframe src="sites/noir-fine-art.html" scrolling="no" loading="lazy"></iframe></div>
-      <div class="cbody"><div class="r"><h3>Éclat</h3><span class="arrow">View live →</span></div><p>Fine art &amp; framed prints store with made-to-order framing.</p></div>
-    </a>
     <a class="card" href="sites/drift-coffee.html" target="_blank">
-      <div class="thumb"><span class="badge">E-commerce</span><iframe src="sites/drift-coffee.html" scrolling="no" loading="lazy"></iframe></div>
+      <div class="thumb pic" style="background-image:url(img/thumb-drift.jpg)"><span class="badge">E-commerce</span></div>
       <div class="cbody"><div class="r"><h3>Drift Coffee</h3><span class="arrow">View live →</span></div><p>Specialty coffee shop with product grid and subscriptions.</p></div>
     </a>
-    <a class="card" href="sites/nova-ai.html" target="_blank">
-      <div class="thumb"><span class="badge">SaaS · Tech</span><iframe src="sites/nova-ai.html" scrolling="no" loading="lazy"></iframe></div>
-      <div class="cbody"><div class="r"><h3>Nova</h3><span class="arrow">View live →</span></div><p>AI analytics platform landing page with product UI.</p></div>
-    </a>
     <a class="card" href="sites/atelier-nine.html" target="_blank">
-      <div class="thumb"><span class="badge">Portfolio · Design</span><iframe src="sites/atelier-nine.html" scrolling="no" loading="lazy"></iframe></div>
-      <div class="cbody"><div class="r"><h3>Atelier IX</h3><span class="arrow">View live →</span></div><p>Editorial portfolio for an interior design studio.</p></div>
+      <div class="thumb pic" style="background-image:url(img/thumb-atelier.jpg)"><span class="badge">Interior Design</span></div>
+      <div class="cbody"><div class="r"><h3>Atelier IX</h3><span class="arrow">View live →</span></div><p>Editorial portfolio for a luxury interior design studio.</p></div>
     </a>
     <a class="card" href="sites/terra-kitchen.html" target="_blank">
-      <div class="thumb"><span class="badge">Restaurant</span><iframe src="sites/terra-kitchen.html" scrolling="no" loading="lazy"></iframe></div>
+      <div class="thumb pic" style="background-image:url(img/thumb-terra.jpg)"><span class="badge">Restaurant</span></div>
       <div class="cbody"><div class="r"><h3>Terra</h3><span class="arrow">View live →</span></div><p>Farm-to-table restaurant with menu and reservations.</p></div>
     </a>
+    <a class="card" href="sites/nova-ai.html" target="_blank">
+      <div class="thumb pic" style="background-image:url(img/thumb-nova.jpg)"><span class="badge">SaaS · Tech</span></div>
+      <div class="cbody"><div class="r"><h3>Nova</h3><span class="arrow">View live →</span></div><p>AI analytics platform landing page with product UI.</p></div>
+    </a>
     <a class="card" href="sites/meridian-advisory.html" target="_blank">
-      <div class="thumb"><span class="badge">Corporate · Finance</span><iframe src="sites/meridian-advisory.html" scrolling="no" loading="lazy"></iframe></div>
+      <div class="thumb pic" style="background-image:url(img/thumb-meridian.jpg)"><span class="badge">Corporate · Finance</span></div>
       <div class="cbody"><div class="r"><h3>Meridian</h3><span class="arrow">View live →</span></div><p>Financial advisory firm with a corporate, trusted feel.</p></div>
     </a>
     <a class="card" href="sites/forge-fitness.html" target="_blank">
-      <div class="thumb"><span class="badge">Fitness</span><iframe src="sites/forge-fitness.html" scrolling="no" loading="lazy"></iframe></div>
+      <div class="thumb pic" style="background-image:url(img/thumb-forge.jpg)"><span class="badge">Fitness</span></div>
       <div class="cbody"><div class="r"><h3>Forge</h3><span class="arrow">View live →</span></div><p>Bold strength studio with programs and class schedule.</p></div>
     </a>
     <a class="card" href="sites/lumen-dental.html" target="_blank">
-      <div class="thumb"><span class="badge">Healthcare</span><iframe src="sites/lumen-dental.html" scrolling="no" loading="lazy"></iframe></div>
+      <div class="thumb pic" style="background-image:url(img/thumb-lumen.jpg)"><span class="badge">Healthcare</span></div>
       <div class="cbody"><div class="r"><h3>Lumen Dental</h3><span class="arrow">View live →</span></div><p>Clean, reassuring clinic site with online booking.</p></div>
     </a>
   </div>
@@ -95,5 +93,28 @@
 <footer class="wrap">
   <b>Moove Creating</b> — Web design &amp; development · Let's build yours. · hello@moovecreating.com
 </footer>
+<!--mv-anim-->
+<style>
+@media (prefers-reduced-motion:no-preference){
+ html.mv-on [data-rise]{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+ html.mv-on [data-rise].in{opacity:1;transform:none}
+}
+a.btn,.btn,.book,.add,.cart,.news .field a{transition:transform .2s ease,box-shadow .2s ease,filter .2s}
+a.btn:hover,.btn:hover,.book:hover,.add:hover,.cart:hover{transform:translateY(-2px)}
+</style>
+<script>
+(function(){
+ var R=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(R||!('IntersectionObserver'in window))return;
+ document.documentElement.classList.add('mv-on');
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
+ function run(){
+  var sels='section,.hero,.card,.prog,.dish,.proj,.p,.kpi,.serv>div,.feat>div,.grid>*,.band>div,.stats>div,.menu>div,.work>div,.prods>div,.s';
+  var els=document.querySelectorAll(sels),seen=[];
+  for(var i=0;i<els.length;i++){var el=els[i];if(seen.indexOf(el)<0){seen.push(el);el.setAttribute('data-rise','');io.observe(el);}}
+ }
+ if(document.readyState!=='loading')run();else document.addEventListener('DOMContentLoaded',run);
+})();
+</script>
 </body>
 </html>

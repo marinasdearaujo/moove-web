@@ -94,5 +94,28 @@
 </section>
 
 <footer><div class="wrap">Lumen Dental · 210 Brightwater Ave · Mon–Fri 8–6 · (555) 240-1180</div></footer>
+<!--mv-anim-->
+<style>
+@media (prefers-reduced-motion:no-preference){
+ html.mv-on [data-rise]{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+ html.mv-on [data-rise].in{opacity:1;transform:none}
+}
+a.btn,.btn,.book,.add,.cart,.news .field a{transition:transform .2s ease,box-shadow .2s ease,filter .2s}
+a.btn:hover,.btn:hover,.book:hover,.add:hover,.cart:hover{transform:translateY(-2px)}
+</style>
+<script>
+(function(){
+ var R=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(R||!('IntersectionObserver'in window))return;
+ document.documentElement.classList.add('mv-on');
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
+ function run(){
+  var sels='section,.hero,.card,.prog,.dish,.proj,.p,.kpi,.serv>div,.feat>div,.grid>*,.band>div,.stats>div,.menu>div,.work>div,.prods>div,.s';
+  var els=document.querySelectorAll(sels),seen=[];
+  for(var i=0;i<els.length;i++){var el=els[i];if(seen.indexOf(el)<0){seen.push(el);el.setAttribute('data-rise','');io.observe(el);}}
+ }
+ if(document.readyState!=='loading')run();else document.addEventListener('DOMContentLoaded',run);
+})();
+</script>
 </body>
 </html>

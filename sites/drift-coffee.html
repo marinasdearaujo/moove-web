@@ -23,17 +23,16 @@
   .cta{display:flex;gap:14px;align-items:center}
   .btn{background:var(--accent);color:#fff;padding:14px 28px;border-radius:30px;font-weight:700;font-size:15px;text-decoration:none}
   .ghost{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:3px}
-  .himg{height:460px;border-radius:26px;background:radial-gradient(circle at 65% 35%,#e8d5bf,transparent 55%),linear-gradient(150deg,#a9713f,#4a2f1c);position:relative;overflow:hidden;box-shadow:0 30px 60px -28px rgba(74,47,28,.55)}
-  .himg .bag{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:180px}
+  .himg{height:460px;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(74,47,28,.55)}
+  .himg img{width:100%;height:100%;object-fit:cover;display:block}
   section{padding:70px 0}
   .ey{text-align:center;color:var(--brown);font-weight:700;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
   h2{text-align:center;font-size:40px;letter-spacing:-.8px;font-weight:800;margin-bottom:48px}
   .prods{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .p{background:#fff;border:1px solid #eee2d3;border-radius:20px;overflow:hidden}
-  .p .im{height:220px;position:relative;display:flex;align-items:center;justify-content:center;font-size:80px}
-  .p:nth-child(1) .im{background:linear-gradient(140deg,#c98a4e,#6f4a2f)}
-  .p:nth-child(2) .im{background:linear-gradient(140deg,#8f6b4a,#3f2a1a)}
-  .p:nth-child(3) .im{background:linear-gradient(140deg,#d9a86a,#8a5a2f)}
+  .p .im{height:220px;position:relative;overflow:hidden}
+  .p .im img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+  .p:hover .im img{transform:scale(1.05)}
   .p .im .badge{position:absolute;top:14px;left:14px;background:#fff;color:var(--brown-d);font-size:12px;font-weight:800;padding:5px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
   .p .b{padding:22px}
   .p .r{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
@@ -67,7 +66,7 @@
       <p>Single-origin beans roasted the week they ship, so every cup tastes like it should.</p>
       <div class="cta"><a href="#" class="btn">Shop the roasts</a><a href="#" class="ghost">Start a subscription</a></div>
     </div>
-    <div class="himg"><div class="bag">📦</div></div>
+    <div class="himg"><img src="img/drift-hero.jpg" alt="Premium coffee bag with roasted beans"></div>
   </div>
 </div>
 
@@ -75,9 +74,9 @@
   <div class="ey">Best sellers</div>
   <h2>This week's roasts</h2>
   <div class="prods">
-    <div class="p"><div class="im"><span class="badge">Bestseller</span>🫘</div><div class="b"><div class="r"><h3>Morning Drift</h3><span class="price">$18</span></div><div class="notes">Chocolate · hazelnut · smooth</div><a href="#" class="add">Add to cart</a></div></div>
-    <div class="p"><div class="im">🫘</div><div class="b"><div class="r"><h3>Dark Harbor</h3><span class="price">$19</span></div><div class="notes">Bold · caramel · low acidity</div><a href="#" class="add">Add to cart</a></div></div>
-    <div class="p"><div class="im"><span class="badge">New</span>🫘</div><div class="b"><div class="r"><h3>Ethiopia Guji</h3><span class="price">$22</span></div><div class="notes">Floral · blueberry · bright</div><a href="#" class="add">Add to cart</a></div></div>
+    <div class="p"><div class="im"><span class="badge">Bestseller</span><img src="img/drift-1.jpg" alt="Morning Drift roast"></div><div class="b"><div class="r"><h3>Morning Drift</h3><span class="price">$18</span></div><div class="notes">Chocolate · hazelnut · smooth</div><a href="#" class="add">Add to cart</a></div></div>
+    <div class="p"><div class="im"><img src="img/drift-2.jpg" alt="Dark Harbor roast"></div><div class="b"><div class="r"><h3>Dark Harbor</h3><span class="price">$19</span></div><div class="notes">Bold · caramel · low acidity</div><a href="#" class="add">Add to cart</a></div></div>
+    <div class="p"><div class="im"><span class="badge">New</span><img src="img/drift-3.jpg" alt="Ethiopia Guji roast"></div><div class="b"><div class="r"><h3>Ethiopia Guji</h3><span class="price">$22</span></div><div class="notes">Floral · blueberry · bright</div><a href="#" class="add">Add to cart</a></div></div>
   </div>
 </section>
 
@@ -97,5 +96,28 @@
 </div>
 
 <footer>Drift Coffee Roasters · Portland, OR · @driftcoffee</footer>
+<!--mv-anim-->
+<style>
+@media (prefers-reduced-motion:no-preference){
+ html.mv-on [data-rise]{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+ html.mv-on [data-rise].in{opacity:1;transform:none}
+}
+a.btn,.btn,.book,.add,.cart,.news .field a{transition:transform .2s ease,box-shadow .2s ease,filter .2s}
+a.btn:hover,.btn:hover,.book:hover,.add:hover,.cart:hover{transform:translateY(-2px)}
+</style>
+<script>
+(function(){
+ var R=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(R||!('IntersectionObserver'in window))return;
+ document.documentElement.classList.add('mv-on');
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
+ function run(){
+  var sels='section,.hero,.card,.prog,.dish,.proj,.p,.kpi,.serv>div,.feat>div,.grid>*,.band>div,.stats>div,.menu>div,.work>div,.prods>div,.s';
+  var els=document.querySelectorAll(sels),seen=[];
+  for(var i=0;i<els.length;i++){var el=els[i];if(seen.indexOf(el)<0){seen.push(el);el.setAttribute('data-rise','');io.observe(el);}}
+ }
+ if(document.readyState!=='loading')run();else document.addEventListener('DOMContentLoaded',run);
+})();
+</script>
 </body>
 </html>
