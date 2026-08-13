@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drift — Specialty Coffee, Shipped Fresh</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#fbf7f2;--ink:#241a12;--brown:#6f4a2f;--brown-d:#4a2f1c;--cream:#f0e4d4;--accent:#d98b3f}
+  body{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  .top{background:var(--brown-d);color:var(--cream);text-align:center;padding:11px;font-size:13.5px;letter-spacing:.5px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+  .logo{font-weight:800;font-size:25px;letter-spacing:-.5px;display:flex;align-items:center;gap:9px}
+  .nlinks{display:flex;gap:30px;font-size:15px;font-weight:500}
+  .nlinks a{color:var(--ink);text-decoration:none}
+  .cart{background:var(--brown);color:#fff;padding:11px 20px;border-radius:30px;font-weight:700;font-size:14px;text-decoration:none}
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:40px 0 60px}
+  .tag{display:inline-block;background:var(--cream);color:var(--brown-d);font-weight:700;font-size:13px;padding:7px 15px;border-radius:20px;margin-bottom:22px}
+  h1{font-size:62px;line-height:1.02;letter-spacing:-1.5px;font-weight:800;margin-bottom:20px}
+  h1 span{color:var(--brown)}
+  .hero p{font-size:18.5px;max-width:430px;margin-bottom:30px;color:#5a4636}
+  .cta{display:flex;gap:14px;align-items:center}
+  .btn{background:var(--accent);color:#fff;padding:14px 28px;border-radius:30px;font-weight:700;font-size:15px;text-decoration:none}
+  .ghost{color:var(--ink);font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:3px}
+  .himg{height:460px;border-radius:26px;background:radial-gradient(circle at 65% 35%,#e8d5bf,transparent 55%),linear-gradient(150deg,#a9713f,#4a2f1c);position:relative;overflow:hidden;box-shadow:0 30px 60px -28px rgba(74,47,28,.55)}
+  .himg .bag{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:180px}
+  section{padding:70px 0}
+  .ey{text-align:center;color:var(--brown);font-weight:700;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+  h2{text-align:center;font-size:40px;letter-spacing:-.8px;font-weight:800;margin-bottom:48px}
+  .prods{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .p{background:#fff;border:1px solid #eee2d3;border-radius:20px;overflow:hidden}
+  .p .im{height:220px;position:relative;display:flex;align-items:center;justify-content:center;font-size:80px}
+  .p:nth-child(1) .im{background:linear-gradient(140deg,#c98a4e,#6f4a2f)}
+  .p:nth-child(2) .im{background:linear-gradient(140deg,#8f6b4a,#3f2a1a)}
+  .p:nth-child(3) .im{background:linear-gradient(140deg,#d9a86a,#8a5a2f)}
+  .p .im .badge{position:absolute;top:14px;left:14px;background:#fff;color:var(--brown-d);font-size:12px;font-weight:800;padding:5px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+  .p .b{padding:22px}
+  .p .r{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
+  .p h3{font-size:20px}
+  .p .price{font-size:19px;font-weight:800;color:var(--brown)}
+  .p .notes{font-size:14px;color:#7a6552;margin-bottom:16px}
+  .p .add{display:block;text-align:center;background:var(--cream);color:var(--brown-d);padding:12px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none}
+  .band{background:var(--brown-d);color:var(--cream);border-radius:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:50px;text-align:center;margin:20px 0}
+  .band .ic{font-size:36px;margin-bottom:12px}
+  .band h4{font-size:19px;margin-bottom:6px}
+  .band p{opacity:.75;font-size:14.5px}
+  .sub{text-align:center;padding:80px 30px}
+  .sub h2{margin-bottom:14px}
+  .sub p{color:#5a4636;font-size:17px;margin-bottom:28px}
+  footer{border-top:1px solid #ece0d1;padding:36px 0;text-align:center;color:#7a6552;font-size:14px}
+</style>
+</head>
+<body>
+<div class="top">Free shipping on orders over $35 · Roasted to order, every week ☕</div>
+<div class="wrap">
+  <nav>
+    <div class="logo">☕ Drift</div>
+    <div class="nlinks"><a href="#">Shop</a><a href="#">Subscriptions</a><a href="#">Our Roasters</a><a href="#">Wholesale</a></div>
+    <a href="#" class="cart">Cart · 0</a>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <span class="tag">🌱 Ethically sourced, small-batch</span>
+      <h1>Coffee worth<br><span>slowing down for</span></h1>
+      <p>Single-origin beans roasted the week they ship, so every cup tastes like it should.</p>
+      <div class="cta"><a href="#" class="btn">Shop the roasts</a><a href="#" class="ghost">Start a subscription</a></div>
+    </div>
+    <div class="himg"><div class="bag">📦</div></div>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="ey">Best sellers</div>
+  <h2>This week's roasts</h2>
+  <div class="prods">
+    <div class="p"><div class="im"><span class="badge">Bestseller</span>🫘</div><div class="b"><div class="r"><h3>Morning Drift</h3><span class="price">$18</span></div><div class="notes">Chocolate · hazelnut · smooth</div><a href="#" class="add">Add to cart</a></div></div>
+    <div class="p"><div class="im">🫘</div><div class="b"><div class="r"><h3>Dark Harbor</h3><span class="price">$19</span></div><div class="notes">Bold · caramel · low acidity</div><a href="#" class="add">Add to cart</a></div></div>
+    <div class="p"><div class="im"><span class="badge">New</span>🫘</div><div class="b"><div class="r"><h3>Ethiopia Guji</h3><span class="price">$22</span></div><div class="notes">Floral · blueberry · bright</div><a href="#" class="add">Add to cart</a></div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="band">
+    <div><div class="ic">🚚</div><h4>Roasted to order</h4><p>Shipped within 48 hours of roasting.</p></div>
+    <div><div class="ic">🌍</div><h4>Direct trade</h4><p>Fair prices paid straight to farmers.</p></div>
+    <div><div class="ic">🔁</div><h4>Skip anytime</h4><p>Subscriptions you fully control.</p></div>
+  </div>
+</section>
+
+<div class="sub">
+  <div class="ey">Never run out</div>
+  <h2>Coffee on your schedule</h2>
+  <p>Fresh beans at your door every week, two weeks or month. Save 15% on every subscription.</p>
+  <a href="#" class="btn">Build your subscription</a>
+</div>
+
+<footer>Drift Coffee Roasters · Portland, OR · @driftcoffee</footer>
+</body>
+</html>

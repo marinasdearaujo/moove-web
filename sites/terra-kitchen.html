@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terra — Farm to Table Kitchen</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--cream:#f7f1e6;--ink:#2b271e;--terra:#c05a34;--olive:#556b3d;--sand:#e6dcc6}
+  body{font-family:"Baskerville","Georgia",serif;background:var(--cream);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 34px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:30px 0}
+  .logo{font-size:26px;letter-spacing:3px;font-weight:600;text-transform:uppercase}
+  .nlinks{display:flex;gap:34px;font-size:14px;letter-spacing:1px;text-transform:uppercase;font-family:"Avenir Next",sans-serif}
+  .nlinks a{color:var(--ink);text-decoration:none;opacity:.75}
+  .book{border:1.5px solid var(--ink);padding:11px 24px;border-radius:2px;text-decoration:none;color:var(--ink);font-family:"Avenir Next",sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:40px 0 70px}
+  .hero .k{font-family:"Avenir Next",sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);margin-bottom:22px}
+  .hero h1{font-size:72px;line-height:1.02;font-weight:600;letter-spacing:-1px;margin-bottom:24px}
+  .hero h1 em{color:var(--olive)}
+  .hero p{font-size:19px;max-width:440px;margin-bottom:32px;opacity:.85}
+  .heroimg{height:520px;border-radius:6px;background:
+    radial-gradient(circle at 30% 30%,rgba(255,255,255,.25),transparent 40%),
+    linear-gradient(160deg,#b8502e,#7a3b22 55%,#556b3d);position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(43,39,30,.6)}
+  .heroimg .plate{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#f0e6d0,#d8c9a8);box-shadow:inset 0 0 40px rgba(0,0,0,.15),0 20px 40px rgba(0,0,0,.3)}
+  .heroimg .plate:after{content:"🥗";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:120px}
+  .strip{background:var(--olive);color:var(--cream);text-align:center;padding:22px;font-family:"Avenir Next",sans-serif;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+  section{padding:90px 0}
+  .ey{font-family:"Avenir Next",sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);text-align:center;margin-bottom:14px}
+  h2{text-align:center;font-size:46px;font-weight:600;letter-spacing:-.5px;margin-bottom:56px}
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:16px 60px;max-width:900px;margin:0 auto}
+  .dish{border-bottom:1px dashed #c9bfa6;padding-bottom:16px}
+  .dish .r{display:flex;justify-content:space-between;align-items:baseline}
+  .dish .n{font-size:22px}
+  .dish .pr{color:var(--terra);font-size:20px}
+  .dish .d{font-family:"Avenir Next",sans-serif;font-size:14px;opacity:.7;margin-top:4px}
+  .about{background:var(--sand);border-radius:6px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:60px;max-width:1000px;margin:0 auto}
+  .about .im{height:340px;border-radius:5px;background:linear-gradient(150deg,#556b3d,#3d4f2c);position:relative}
+  .about .im:after{content:"👩‍🍳";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:100px}
+  .about h2{text-align:left;margin-bottom:20px;font-size:38px}
+  .about p{font-size:17px;opacity:.85;margin-bottom:16px}
+  .foot{background:var(--ink);color:var(--cream);text-align:center;padding:70px 0}
+  .foot h2{color:var(--cream);margin-bottom:18px}
+  .foot p{font-family:"Avenir Next",sans-serif;opacity:.7;margin-bottom:26px}
+  .foot .book{border-color:var(--cream);color:var(--cream)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">Terra</div>
+    <div class="nlinks"><a href="#">Menu</a><a href="#">Our Farm</a><a href="#">Events</a><a href="#">Contact</a></div>
+    <a href="#" class="book">Reserve</a>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <div class="k">Farm to table · Since 2014</div>
+      <h1>Grown nearby.<br><em>Cooked with care.</em></h1>
+      <p>A seasonal kitchen where every plate starts in the soil of our own farm, thirty minutes down the road.</p>
+      <a href="#" class="book">Book a table</a>
+    </div>
+    <div class="heroimg"><div class="plate"></div></div>
+  </div>
+</div>
+
+<div class="strip">Open Tuesday to Sunday · Dinner from 6pm · Sunday brunch 11am–3pm</div>
+
+<section class="wrap">
+  <div class="ey">This week's harvest</div>
+  <h2>On the menu</h2>
+  <div class="menu">
+    <div class="dish"><div class="r"><span class="n">Heirloom Tomato Salad</span><span class="pr">$16</span></div><div class="d">Basil, aged sherry, stone-milled olive oil</div></div>
+    <div class="dish"><div class="r"><span class="n">Wood-Fired Sourdough</span><span class="pr">$9</span></div><div class="d">Cultured butter, smoked sea salt</div></div>
+    <div class="dish"><div class="r"><span class="n">Slow Lamb Ragù</span><span class="pr">$28</span></div><div class="d">Hand-cut pappardelle, pecorino, rosemary</div></div>
+    <div class="dish"><div class="r"><span class="n">Charred Market Greens</span><span class="pr">$14</span></div><div class="d">Hazelnut, lemon, aged parmesan</div></div>
+    <div class="dish"><div class="r"><span class="n">Roast Chicken for Two</span><span class="pr">$42</span></div><div class="d">Root vegetables, pan jus, herb salsa</div></div>
+    <div class="dish"><div class="r"><span class="n">Honey & Thyme Tart</span><span class="pr">$12</span></div><div class="d">From our own hives, crème fraîche</div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="about">
+    <div class="im"></div>
+    <div>
+      <div class="ey" style="text-align:left">Our story</div>
+      <h2>From our hands to yours</h2>
+      <p>Terra began with a single garden and a simple belief: food tastes better when you know where it came from.</p>
+      <p>Today our team grows over sixty crops across four acres, picking each morning for that evening's service.</p>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  <div class="ey" style="color:var(--terra)">Come sit with us</div>
+  <h2>Reserve your table</h2>
+  <p>124 Orchard Lane · Riverside · (555) 018-4420</p>
+  <a href="#" class="book">Book online</a>
+</div>
+</body>
+</html>

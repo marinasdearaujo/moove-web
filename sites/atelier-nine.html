@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atelier Nine — Interior Design Studio</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--ink:#1c1a17;--paper:#f6f4ef;--stone:#b7ab98;--line:#e0dbd1}
+  body{font-family:"Didot","Baskerville","Georgia",serif;background:var(--paper);color:var(--ink);line-height:1.6}
+  .san{font-family:"Avenir Next","Helvetica Neue",sans-serif}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 44px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:34px 0}
+  .logo{font-size:24px;letter-spacing:6px;text-transform:uppercase}
+  .nlinks{display:flex;gap:40px;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+  .nlinks a{color:var(--ink);text-decoration:none;opacity:.7}
+  .hero{padding:60px 0 40px}
+  .hero .k{font-size:12px;letter-spacing:4px;text-transform:uppercase;opacity:.6;margin-bottom:30px}
+  .hero h1{font-size:92px;line-height:1;font-weight:400;letter-spacing:-1.5px;max-width:900px}
+  .hero h1 em{font-style:italic;color:var(--stone)}
+  .hero .meta{display:flex;justify-content:space-between;align-items:flex-end;margin-top:44px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+  .hero .meta p{max-width:420px;font-size:18px;opacity:.85}
+  .hero .meta a{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px;white-space:nowrap}
+  .big{height:520px;margin:20px 0 0;border-radius:3px;background:linear-gradient(135deg,#cfc4b0,#a89a83 60%,#6f6555);position:relative;overflow:hidden}
+  .big:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 25% 30%,rgba(255,255,255,.3),transparent 45%)}
+  .big .cap{position:absolute;bottom:26px;left:30px;color:#f6f4ef;z-index:2}
+  .big .cap .t{font-size:26px}
+  .big .cap .s{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.85}
+  section{padding:100px 0}
+  .ey{font-size:12px;letter-spacing:3px;text-transform:uppercase;opacity:.6;margin-bottom:16px}
+  h2{font-size:52px;font-weight:400;letter-spacing:-.8px;margin-bottom:60px}
+  h2 em{font-style:italic;color:var(--stone)}
+  .work{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .proj{cursor:pointer}
+  .proj .im{height:400px;border-radius:3px;position:relative;overflow:hidden;margin-bottom:18px}
+  .proj:nth-child(1) .im{background:linear-gradient(140deg,#d8cdb6,#8c8069)}
+  .proj:nth-child(2) .im{background:linear-gradient(140deg,#c3b7a3,#5f5647)}
+  .proj:nth-child(3) .im{background:linear-gradient(140deg,#e2d9c8,#b0a48c)}
+  .proj:nth-child(4) .im{background:linear-gradient(140deg,#a89a83,#4d453a)}
+  .proj .im:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 25%,rgba(255,255,255,.28),transparent 50%)}
+  .proj .r{display:flex;justify-content:space-between;align-items:baseline}
+  .proj .n{font-size:26px}
+  .proj .y{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.55}
+  .proj .loc{font-size:14px;opacity:.6;margin-top:2px}
+  .quote{text-align:center;max-width:820px;margin:0 auto;padding:40px 0}
+  .quote p{font-size:38px;font-weight:400;line-height:1.35;letter-spacing:-.5px}
+  .quote .a{font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.6;margin-top:30px}
+  .foot{border-top:1px solid var(--line);padding:60px 0;display:flex;justify-content:space-between;align-items:flex-end}
+  .foot h3{font-size:44px;font-weight:400;letter-spacing:-.5px}
+  .foot .san{text-align:right;font-size:13px;letter-spacing:1px;line-height:2;opacity:.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">Atelier IX</div>
+    <div class="nlinks san"><a href="#">Work</a><a href="#">Studio</a><a href="#">Approach</a><a href="#">Journal</a><a href="#">Contact</a></div>
+  </nav>
+
+  <div class="hero">
+    <div class="k san">Interior architecture · Est. 2009</div>
+    <h1>Spaces that hold <em>light</em>, and quiet.</h1>
+    <div class="meta">
+      <p class="san">An interior design studio shaping calm, considered homes and spaces across coastal and city life.</p>
+      <a href="#" class="san">View selected work</a>
+    </div>
+    <div class="big"><div class="cap san"><div class="t" style="font-family:Didot,serif">Coastal House</div><div class="s">Amalfi · 2025</div></div></div>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="ey san">Selected work</div>
+  <h2>Recent <em>projects</em></h2>
+  <div class="work">
+    <div class="proj"><div class="im"></div><div class="r"><span class="n">The Slow House</span><span class="y san">2025</span></div><div class="loc san">Private residence · Lisbon</div></div>
+    <div class="proj"><div class="im"></div><div class="r"><span class="n">Marble & Oak</span><span class="y san">2024</span></div><div class="loc san">Boutique hotel · Milan</div></div>
+    <div class="proj"><div class="im"></div><div class="r"><span class="n">Garden Apartment</span><span class="y san">2024</span></div><div class="loc san">Residence · Copenhagen</div></div>
+    <div class="proj"><div class="im"></div><div class="r"><span class="n">Studio Aera</span><span class="y san">2023</span></div><div class="loc san">Workspace · New York</div></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="quote">
+    <p>“They didn't just design a house. They understood how we wanted to live in it.”</p>
+    <div class="a san">— Private client, Lisbon</div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="foot">
+    <h3>Let's design something<br>lasting.</h3>
+    <div class="san">studio@atelier-ix.com<br>+39 02 8841 220<br>Via della Spiga · Milan</div>
+  </div>
+</div>
+</body>
+</html>

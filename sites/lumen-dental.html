@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen — Modern Dental Care</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#f4f9fb;--ink:#1a3540;--teal:#18a0a8;--teal-d:#0f7a80;--soft:#dff0f2;--txt:#3a5560}
+  body{font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;background:#fff;color:var(--txt);line-height:1.6}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 34px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+  .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:23px;color:var(--ink);letter-spacing:-.3px}
+  .logo .m{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#5ac8cf);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
+  .nlinks{display:flex;gap:32px;font-size:15px;font-weight:500}
+  .nlinks a{color:var(--txt);text-decoration:none}
+  .btn{background:var(--teal);color:#fff;padding:12px 24px;border-radius:30px;font-weight:700;font-size:14.5px;text-decoration:none}
+  .hero{background:var(--bg);border-radius:0 0 40px 40px}
+  .hgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:60px 0 70px}
+  .tag{display:inline-block;background:var(--soft);color:var(--teal-d);font-weight:700;font-size:13px;padding:7px 15px;border-radius:20px;margin-bottom:22px}
+  h1{font-size:56px;line-height:1.06;letter-spacing:-1.2px;color:var(--ink);font-weight:800;margin-bottom:20px}
+  .hero p{font-size:18.5px;max-width:440px;margin-bottom:30px}
+  .cta{display:flex;gap:14px;align-items:center}
+  .ghost{color:var(--ink);font-weight:700;font-size:15px;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .himg{height:430px;border-radius:26px;background:radial-gradient(circle at 70% 30%,#fff,transparent 55%),linear-gradient(150deg,#5ac8cf,#18a0a8);position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(24,160,168,.6)}
+  .himg .tooth{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:150px}
+  .himg .badge{position:absolute;bottom:24px;left:24px;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+  .himg .badge .n{font-size:26px;font-weight:800;color:var(--ink)}
+  .himg .badge .l{font-size:13px}
+  .trust{display:flex;justify-content:center;gap:50px;padding:34px 0;flex-wrap:wrap;color:var(--ink);font-weight:700;font-size:15px}
+  .trust span{display:flex;align-items:center;gap:9px}
+  .trust span:before{content:"✓";color:var(--teal);font-weight:900}
+  section{padding:80px 0}
+  .ey{text-align:center;color:var(--teal-d);font-weight:700;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+  h2{text-align:center;font-size:40px;color:var(--ink);letter-spacing:-.8px;font-weight:800;margin-bottom:50px}
+  .serv{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .s{background:#fff;border:1px solid #e6eef0;border-radius:20px;padding:28px 24px;text-align:center;transition:.2s}
+  .s .ic{width:60px;height:60px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px}
+  .s h3{color:var(--ink);font-size:18px;margin-bottom:8px}
+  .s p{font-size:14px}
+  .cta2{background:var(--ink);border-radius:32px;color:#fff;text-align:center;padding:66px 30px;margin:20px 0}
+  .cta2 h2{color:#fff;margin-bottom:14px}
+  .cta2 p{opacity:.8;font-size:17px;margin-bottom:28px}
+  .cta2 .btn{background:var(--teal)}
+  footer{padding:40px 0;text-align:center;font-size:14px;color:var(--txt)}
+</style>
+</head>
+<body>
+<div class="hero">
+<div class="wrap">
+  <nav>
+    <div class="logo"><span class="m">✦</span>Lumen Dental</div>
+    <div class="nlinks"><a href="#">Services</a><a href="#">Our Team</a><a href="#">New Patients</a><a href="#">Contact</a></div>
+    <a href="#" class="btn">Book appointment</a>
+  </nav>
+
+  <div class="hgrid">
+    <div>
+      <span class="tag">Now accepting new patients</span>
+      <h1>A dentist you'll actually look forward to</h1>
+      <p>Gentle, modern care in a calm space, with a team that listens first and explains everything.</p>
+      <div class="cta"><a href="#" class="btn">Book your visit</a><a href="#" class="ghost">▶ See the clinic</a></div>
+    </div>
+    <div class="himg">
+      <div class="tooth">🦷</div>
+      <div class="badge"><div class="n">4.9 ★</div><div class="l">1,200+ happy patients</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="wrap">
+  <div class="trust"><span>Same-week appointments</span><span>Most insurance accepted</span><span>Painless technology</span></div>
+</div>
+
+<section class="wrap">
+  <div class="ey">What we do</div>
+  <h2>Complete care under one roof</h2>
+  <div class="serv">
+    <div class="s"><div class="ic">🪥</div><h3>General</h3><p>Cleanings, checkups and everyday preventive care.</p></div>
+    <div class="s"><div class="ic">✨</div><h3>Cosmetic</h3><p>Whitening, veneers and smile makeovers.</p></div>
+    <div class="s"><div class="ic">🦷</div><h3>Implants</h3><p>Natural-looking, permanent tooth replacement.</p></div>
+    <div class="s"><div class="ic">😁</div><h3>Orthodontics</h3><p>Clear aligners and modern braces for all ages.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="cta2">
+    <div class="ey" style="color:#5ac8cf">Your smile starts here</div>
+    <h2>Book in under two minutes</h2>
+    <p>Pick a time that works for you. We'll take care of the rest.</p>
+    <a href="#" class="btn">Schedule online</a>
+  </div>
+</section>
+
+<footer><div class="wrap">Lumen Dental · 210 Brightwater Ave · Mon–Fri 8–6 · (555) 240-1180</div></footer>
+</body>
+</html>

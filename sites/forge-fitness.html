@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forge — Strength Studio</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0d0d0d;--card:#161616;--txt:#f2f2f2;--mut:#9a9a9a;--acc:#e5ff3d;--acc2:#ff4d2e}
+  body{font-family:"Helvetica Neue","Arial Narrow",Arial,sans-serif;background:var(--bg);color:var(--txt);line-height:1.5}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0}
+  .logo{font-weight:900;font-size:26px;letter-spacing:1px;text-transform:uppercase;font-style:italic}
+  .logo span{color:var(--acc)}
+  .nlinks{display:flex;gap:30px;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+  .nlinks a{color:var(--txt);text-decoration:none;opacity:.8}
+  .btn{background:var(--acc);color:#0d0d0d;padding:13px 26px;font-weight:900;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:2px}
+  .hero{padding:70px 0 60px;position:relative}
+  .hero .big{font-size:130px;line-height:.9;font-weight:900;font-style:italic;letter-spacing:-3px;text-transform:uppercase}
+  .hero .big em{color:var(--acc);font-style:italic}
+  .hero .row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:30px;gap:40px}
+  .hero p{font-size:19px;color:var(--mut);max-width:440px}
+  .hero .imgband{height:12px;background:repeating-linear-gradient(45deg,var(--acc2),var(--acc2) 20px,#0d0d0d 20px,#0d0d0d 40px);margin-top:40px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #262626;border-bottom:1px solid #262626}
+  .stats div{padding:38px 20px;text-align:center;border-right:1px solid #262626}
+  .stats div:last-child{border-right:none}
+  .stats .n{font-size:52px;font-weight:900;font-style:italic;color:var(--acc)}
+  .stats .l{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);margin-top:4px}
+  section{padding:90px 0}
+  .head2{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:46px}
+  h2{font-size:60px;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:-2px;line-height:.95}
+  h2 em{color:var(--acc)}
+  .progs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .prog{background:var(--card);border-radius:6px;overflow:hidden;border:1px solid #222}
+  .prog .top{height:160px;position:relative;display:flex;align-items:center;justify-content:center;font-size:70px}
+  .prog:nth-child(1) .top{background:linear-gradient(135deg,#ff4d2e,#7a1e10)}
+  .prog:nth-child(2) .top{background:linear-gradient(135deg,#e5ff3d,#6b7500)}
+  .prog:nth-child(3) .top{background:linear-gradient(135deg,#3d7bff,#132a6b)}
+  .prog .b{padding:26px}
+  .prog h3{font-size:24px;font-weight:900;font-style:italic;text-transform:uppercase;margin-bottom:8px}
+  .prog p{color:var(--mut);font-size:15px;margin-bottom:16px}
+  .prog a{color:var(--acc);font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none}
+  .cta{background:var(--acc);color:#0d0d0d;text-align:center;padding:90px 30px}
+  .cta h2{color:#0d0d0d;margin-bottom:18px}
+  .cta p{font-size:19px;font-weight:600;margin-bottom:34px}
+  .cta .btn{background:#0d0d0d;color:var(--acc)}
+  footer{padding:40px 0;color:var(--mut);font-size:13px;letter-spacing:1px;text-transform:uppercase;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">FOR<span>GE</span></div>
+    <div class="nlinks"><a href="#">Programs</a><a href="#">Coaches</a><a href="#">Schedule</a><a href="#">Pricing</a></div>
+    <a href="#" class="btn">Free trial</a>
+  </nav>
+
+  <div class="hero">
+    <div class="big">BUILT<br>NOT <em>BORN</em></div>
+    <div class="row">
+      <p>A strength studio for people who show up. Small classes, real coaching, zero fluff.</p>
+      <a href="#" class="btn">Claim your first week</a>
+    </div>
+    <div class="imgband"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="stats">
+    <div><div class="n">12</div><div class="l">Classes daily</div></div>
+    <div><div class="n">6:1</div><div class="l">Member to coach</div></div>
+    <div><div class="n">2.4K</div><div class="l">Members strong</div></div>
+    <div><div class="n">4.9★</div><div class="l">Average rating</div></div>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="head2"><h2>Pick your <em>fight</em></h2></div>
+  <div class="progs">
+    <div class="prog"><div class="top">🔥</div><div class="b"><h3>Strength</h3><p>Barbell foundations and progressive overload, coached every rep.</p><a href="#">Explore →</a></div></div>
+    <div class="prog"><div class="top">⚡</div><div class="b"><h3>Conditioning</h3><p>High-intensity intervals that build the engine and burn it clean.</p><a href="#">Explore →</a></div></div>
+    <div class="prog"><div class="top">🥊</div><div class="b"><h3>Combat</h3><p>Boxing and kickboxing fundamentals for power, speed and focus.</p><a href="#">Explore →</a></div></div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>YOUR FIRST WEEK<br>IS ON US</h2>
+  <p>No contracts. No excuses. Just show up.</p>
+  <a href="#" class="btn">Start today</a>
+</div>
+
+<footer><div class="wrap">Forge Strength Studio · 88 Iron Street · Open 5am–10pm</div></footer>
+</body>
+</html>
